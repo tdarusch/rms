@@ -7,6 +7,38 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Frames\AddItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\ManagerDashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\SetUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\WaiterDashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Frames\AddItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\ManagerDashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\SetUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\WaiterDashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
