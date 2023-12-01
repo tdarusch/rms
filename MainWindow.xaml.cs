@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RMS.Frames;
 
 namespace RMS
 {
@@ -23,6 +24,31 @@ namespace RMS
         public MainWindow()
         {
             InitializeComponent();
+            Main.Content = new Frames.Login();
+        }
+
+        public static void displayLogin() {
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new Frames.Login();
+        }
+
+        public static void displayLogout()
+        {
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new Frames.Login("You have logged out successfully");
+        }
+
+        public static void displayManagerPortal()
+        {
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new Frames.ManagerDashboard();
+        }
+
+        public static void displayAddItem()
+        {
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new Frames.AddItem();
+        }
+
+        public static void displayWaiterPortal()
+        {
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new Frames.WaiterDashboard();
         }
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RMS.Controllers;
 
 namespace RMS.Frames
 {
@@ -23,6 +24,11 @@ namespace RMS.Frames
         public ManagerDashboard()
         {
             InitializeComponent();
+        }
+
+        public void LogoutClick(object sender, RoutedEventArgs e)
+        {
+            LogoutController.Logout();
         }
     }
 }

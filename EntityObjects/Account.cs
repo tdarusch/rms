@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace RMS.EntityObjects
 {
@@ -52,7 +53,8 @@ namespace RMS.EntityObjects
 
         public void setPassword(string password)
         {
-            this.password = password;
+            String hashPassword = getHashString(password);
+            this.password = hashPassword;
         }
 
         public string getType()
@@ -71,5 +73,19 @@ namespace RMS.EntityObjects
                 throw new ArgumentException("Invalid account type");
             }
         }
+
+        public static string getHashString(string input)
+        {
+            if (String.IsNullOrEmpty(input))
+                return String.Empty;
+
+            using (var sha = new SHA256Managed())
+            {
+                byte[] textData = System.Text.Encoding.UTF8.GetBytes(input);
+                byte[] hash = sha.ComputeHash(textData);
+                return BitConverter.ToString(hash).Replace("-", String.Empty);
+            }
+        }
+
     }
 }

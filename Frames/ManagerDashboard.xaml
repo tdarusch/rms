@@ -33,7 +33,7 @@
                 FontSize="15"
                 Grid.Column="1"
             />
-            <Button Background="Snow" FontSize="15" Width="75" Margin="5" Grid.Column="2">
+            <Button Background="Snow" FontSize="15" Width="75" Margin="5" Grid.Column="2" Click="LogoutClick">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>

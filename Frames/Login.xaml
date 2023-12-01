@@ -31,7 +31,7 @@
             <TextBlock Text="Login" FontSize="20" FontWeight="Bold" Margin="10px"/>
             <Separator />
             <TextBlock Text="Username" Margin="10px 10px 10px 5px" FontWeight="Medium" FontSize="15"/>
-            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 40px">
+            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 40px" x:Name="usernameInput" VerticalAlignment="Center" FontSize="18"> 
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -39,14 +39,14 @@
                 </TextBox.Resources>
             </TextBox>
             <TextBlock Text="Password" Margin="10px 10px 10px 5px" FontWeight="Medium" FontSize="15"/>
-            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 40px">
+            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 40px" x:Name="passwordInput" VerticalAlignment="Center" FontSize="18">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <Button Background="Snow" FontSize="15" Width="100px" VerticalAlignment="Center" Height="30">
+            <Button Background="Snow" FontSize="15" Width="100px" VerticalAlignment="Center" Height="30" Click="LoginClick">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -54,13 +54,16 @@
                 </Button.Resources>
                 Submit
             </Button>
-            <TextBlock 
-                Text="You have logged out successfully." 
+            <TextBlock
+                x:Name="HelperText"
+                Text="" 
                 Margin="10px 10px 10px 5px" 
                 FontWeight="Medium" FontSize="15"
                 HorizontalAlignment="Center" 
                 Foreground="#FF8D8D8D" 
                 FontStyle="Italic"
+                TextWrapping="WrapWithOverflow"
+                TextAlignment="Center"
             />
         </StackPanel>
     </Grid>
