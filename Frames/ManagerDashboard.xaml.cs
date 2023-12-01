@@ -30,5 +30,10 @@ namespace RMS.Frames
         {
             LogoutController.Logout();
         }
+
+        public void AddItemClick(object sender, RoutedEventArgs e)
+        {
+            AddItemController.Display();
+        }
     }
 }
