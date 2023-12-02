@@ -22,7 +22,7 @@ namespace RMS.Frames
     public partial class Login : Page
     {
 
-        public Login(String helperText="")
+        public Login(string helperText="")
         {
             InitializeComponent();
             setInfo(helperText);
@@ -42,14 +42,14 @@ namespace RMS.Frames
             }
         }
 
-        private void setError(String error) {
+        private void setError(string error) {
             HelperText.Foreground = Brushes.Maroon;
             HelperText.Text = $"Invalid Input: {error}";
             resetInputs();
             resetHelperText();
         }
 
-        private void setInfo(String info) {
+        private void setInfo(string info) {
             HelperText.Foreground = Brushes.LightGreen;
             HelperText.Text = info;
             resetHelperText();
@@ -64,6 +64,14 @@ namespace RMS.Frames
         private void resetInputs() {
             usernameInput.Text = "";
             passwordInput.Text = "";
+        }
+
+        public static void DisplayLogin() {
+            MainWindow.displayLogin();
+        }
+
+        public static void DisplayLogout() {
+            MainWindow.displayLogout();
         }
 
     }

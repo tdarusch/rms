@@ -3,12 +3,33 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:control="clr-namespace:LoadingControl.Control"
       xmlns:local="clr-namespace:RMS.Frames"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SetUp">
 
-    <Grid>
-        
+    <Grid Background="#FFEEEEEE">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="600" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="380" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <TextBlock 
+            Text="Restaurant Management System"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontWeight="DemiBold"
+            FontSize="15"
+        />
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="10px" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <control:LoadingAnimation HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="LoadingAnimation"/>
+        </StackPanel>
     </Grid>
 </Page>

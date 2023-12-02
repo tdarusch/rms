@@ -16,39 +16,37 @@ using RMS.Frames;
 
 namespace RMS
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            Main.Content = new Frames.Login();
+            Main.Content = new SetUp();
         }
 
         public static void displayLogin() {
-            ((MainWindow)Application.Current.MainWindow).Main.Content = new Frames.Login();
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new Login();
         }
 
         public static void displayLogout()
         {
-            ((MainWindow)Application.Current.MainWindow).Main.Content = new Frames.Login("You have logged out successfully");
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new Login("You have logged out successfully");
         }
 
         public static void displayManagerPortal()
         {
-            ((MainWindow)Application.Current.MainWindow).Main.Content = new Frames.ManagerDashboard();
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new ManagerDashboard();
         }
 
         public static void displayAddItem()
         {
-            ((MainWindow)Application.Current.MainWindow).Main.Content = new Frames.AddItem();
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new AddItem();
         }
 
         public static void displayWaiterPortal()
         {
-            ((MainWindow)Application.Current.MainWindow).Main.Content = new Frames.WaiterDashboard();
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new WaiterDashboard();
         }
+
     }
 }

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using RMS.Controllers;
+using RMS.Frames.Components;
 
 namespace RMS.Frames
 {
@@ -24,6 +25,14 @@ namespace RMS.Frames
         public ManagerDashboard()
         {
             InitializeComponent();
+            DisplayMenuItems();
+        }
+
+        private void DisplayMenuItems() {
+            List<NewMenuItem> list = ItemController.getMenuItemElements();
+            foreach (NewMenuItem item in list) {
+                MenuItemsBox.Items.Add(item);
+            }
         }
 
         public void LogoutClick(object sender, RoutedEventArgs e)
@@ -33,7 +42,12 @@ namespace RMS.Frames
 
         public void AddItemClick(object sender, RoutedEventArgs e)
         {
-            AddItemController.Display();
+            ItemController.Display();
+        }
+
+        public static void Display()
+        {
+            MainWindow.displayManagerPortal();
         }
     }
 }

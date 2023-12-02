@@ -1,6 +1,8 @@
 ﻿C:\Repos\rms\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.i.cs
 
 FC:\Repos\rms\Frames\AddItem.xaml;;
+FC:\Repos\rms\Frames\Components\NewMenuItem.xaml;;
+FC:\Repos\rms\Frames\Control\LoadingAnimation.xaml;;
 FC:\Repos\rms\Frames\Login.xaml;;
 FC:\Repos\rms\Frames\ManagerDashboard.xaml;;
 FC:\Repos\rms\Frames\SetUp.xaml;;

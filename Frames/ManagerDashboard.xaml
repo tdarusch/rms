@@ -57,75 +57,13 @@
                 Background="Snow"
                 HorizontalAlignment="Center"
                 Height="300" VerticalAlignment="Top" Width="650"
+                x:Name="MenuItemsBox"
             >
                 <ListBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </ListBox.Resources>
-                <ListBoxItem Height="100px" Margin="5px" Background="#FFEEEEEE" BorderBrush="LightGray">
-                    <ListBoxItem.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="5"/>
-                        </Style>
-                    </ListBoxItem.Resources>
-                    <StackPanel Height="75px" Width="605px" Margin="0 5">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Lobster Bisque" FontSize="15" FontWeight="SemiBold" VerticalAlignment="Top" Margin="5 0 5 0" />
-                            <TextBlock Text="9.99" FontSize="15" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
-                        </StackPanel>
-                        <Separator />
-                        <TextBlock 
-                            Text="Bisque is a smooth, creamy, highly seasoned soup of French origin, classically based on a strained broth of crustaceans. It can be made from lobster, langoustine, crab, shrimp or crayfish. The French bisque is one of the most popular seafood soups around the world. "
-                            Height="50"
-                            TextWrapping="WrapWithOverflow"
-                            FontStyle="Italic"
-                            Margin="5 0 5 0"
-                        />
-                    </StackPanel>
-                </ListBoxItem>
-                <ListBoxItem Height="100px" Margin="5px" Background="#FFEEEEEE" BorderBrush="LightGray">
-                    <ListBoxItem.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="5"/>
-                        </Style>
-                    </ListBoxItem.Resources>
-                    <StackPanel Height="75px" Width="605px" Margin="0 5">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Lobster Bisque" FontSize="15" FontWeight="SemiBold" VerticalAlignment="Top" Margin="5 0 5 0" />
-                            <TextBlock Text="9.99" FontSize="15" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
-                        </StackPanel>
-                        <Separator />
-                        <TextBlock 
-                            Text="Bisque is a smooth, creamy, highly seasoned soup of French origin, classically based on a strained broth of crustaceans. It can be made from lobster, langoustine, crab, shrimp or crayfish. The French bisque is one of the most popular seafood soups around the world. "
-                            Height="50"
-                            TextWrapping="WrapWithOverflow"
-                            FontStyle="Italic"
-                            Margin="5 0 5 0"
-                        />
-                    </StackPanel>
-                </ListBoxItem>
-                <ListBoxItem Height="100px" Margin="5px" Background="#FFEEEEEE" BorderBrush="LightGray">
-                    <ListBoxItem.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="5"/>
-                        </Style>
-                    </ListBoxItem.Resources>
-                    <StackPanel Height="75px" Width="605px" Margin="0 5">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Lobster Bisque" FontSize="15" FontWeight="SemiBold" VerticalAlignment="Top" Margin="5 0 5 0" />
-                            <TextBlock Text="9.99" FontSize="15" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
-                        </StackPanel>
-                        <Separator />
-                        <TextBlock 
-                            Text="Bisque is a smooth, creamy, highly seasoned soup of French origin, classically based on a strained broth of crustaceans. It can be made from lobster, langoustine, crab, shrimp or crayfish. The French bisque is one of the most popular seafood soups around the world. "
-                            Height="50"
-                            TextWrapping="WrapWithOverflow"
-                            FontStyle="Italic"
-                            Margin="5 0 5 0"
-                        />
-                    </StackPanel>
-                </ListBoxItem>
             </ListBox>
         </StackPanel>
     </Grid>

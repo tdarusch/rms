@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,73 +9,22 @@ namespace RMS.EntityObjects
 {
     public class Order
     {
-        private List<Item> items;
-        private double total;
-        private Account waiter;
+        [Key]
+        public int Id { get; set; }
+        public List<Item> Items { get; set; }
+        public Account Waiter { get; set; }
         private int tableNo;
-
-        public Order(List<Item> items, Account waiter, int tableNo)
+        public int TableNo
         {
-            this.items = items;
-            calculateTotal();
-            setWaiter(waiter);
-            setTableNo(tableNo);
-        }
-
-        public Order(Account waiter, int tableNo)
-        {
-            items = new List<Item>();
-            setWaiter(waiter);
-            setTableNo(tableNo);
-        }
-
-        private void calculateTotal()
-        {
-            foreach (Item item in items)
+            get { return tableNo; }
+            set 
             {
-                total += item.getPrice();
+                if(value >= 0) {
+                    tableNo = value;
+                } else {
+                    tableNo = -1;
+                }
             }
         }
-
-        public List<Item> getItems()
-        {
-            return items;
-        }
-
-        public void addItem(Item item)
-        {
-            items.Add(item);
-            calculateTotal();
-        }
-
-        public double getTotal()
-        {
-            return total;
-        }
-
-        public Account getWaiter()
-        {
-            return waiter;
-        }
-
-        public void setWaiter(Account waiter)
-        {
-            this.waiter = waiter;
-        }
-
-        public int getTableNo()
-        {
-            return tableNo;
-        }
-
-        public void setTableNo(int tableNo)
-        {
-            if(tableNo > 0) {
-                this.tableNo = tableNo;
-            } else {
-                throw new ArgumentException("Invalid table number");
-            }
-        }
-
     }
 }

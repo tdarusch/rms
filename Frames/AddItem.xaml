@@ -29,28 +29,15 @@
         />
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="10px">
             <TextBlock Text="Item Name" Margin="10px 10px 10px 5px" FontWeight="Medium" FontSize="15"/>
-            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 10px">
+            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 10px" x:Name="ItemName">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                <TextBlock Text="Category" Margin="10px 10px 10px 5px" FontWeight="Medium" FontSize="15"/>
-                <Viewbox VerticalAlignment="Center">
-                    <Path 
-                        Fill="DarkGray"
-                        Stretch="Fill"
-                        Data="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-                        Height="15"
-                        Width="20"
-                        Margin="0 8 0 0"
-                    />
-                </Viewbox>
-            </StackPanel>
             <TextBlock Text="Description" Margin="10px 10px 10px 5px" FontWeight="Medium" FontSize="15"/>
-            <TextBox Background="Snow" BorderThickness="1" Height="100px" Margin="10px 0px 10px 10px">
+            <TextBox Background="Snow" BorderThickness="1" Height="100px" Margin="10px 0px 10px 10px" x:Name="ItemDescription">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -58,14 +45,14 @@
                 </TextBox.Resources>
             </TextBox>
             <TextBlock Text="Price" Margin="10px 10px 10px 5px" FontWeight="Medium" FontSize="15"/>
-            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 10px" Width="150px" HorizontalAlignment="Left">
+            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 10px" Width="150px" HorizontalAlignment="Left" x:Name="ItemPrice">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <Button Background="Snow" FontSize="15" Width="100px" VerticalAlignment="Center" Height="30">
+            <Button Background="Snow" FontSize="15" Width="100px" VerticalAlignment="Center" Height="30" Click="Submit">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -73,6 +60,17 @@
                 </Button.Resources>
                 Submit
             </Button>
+            <TextBlock
+                x:Name="HelperText"
+                Text="" 
+                Margin="10px 10px 10px 5px" 
+                FontWeight="Medium" FontSize="15"
+                HorizontalAlignment="Center" 
+                Foreground="#FF8D8D8D" 
+                FontStyle="Italic"
+                TextWrapping="WrapWithOverflow"
+                TextAlignment="Center"
+            />
         </StackPanel>
     </Grid>
 </Page>

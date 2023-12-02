@@ -3,55 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RMS.EntityObjects
 {
     public class Item
     {
+        [Key]
+        public int Id { get; set; }
         private double price;
-        private string name;
-        private string description;
-
-        public Item(double price, string name, string description)
+        public double Price
         {
-            setPrice(price);
-            setName(name);
-            setDescription(description);
-        }
-
-        public double getPrice()
-        {
-            return price;
-        }
-
-        public void setPrice(double price)
-        {
-            if(price > 0) {
-                this.price = price;
-            } else {
-                throw new ArgumentException("Invalid item price");
+            get { return price; }
+            set {
+                if (value > 0.0) {
+                    price = value;
+                } else {
+                    price = 0.0;
+                }
             }
         }
-
-        public string getName()
-        {
-            return name;
-        }
-
-        public void setName(string name)
-        {
-            this.name = name;
-        }
-
-        public string getDescription()
-        {
-            return description;
-        }
-
-        public void setDescription(string description)
-        {
-            this.description = description;
-        }
+        public string Name { get; set; }
+        public string Description { get; set; }
 
     }
 }

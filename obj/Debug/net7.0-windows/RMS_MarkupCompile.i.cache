@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Repos\rms\App.xaml
-6884568551
+91856535463
 
-17712391608
-1981723223080
-Frames\AddItem.xaml;Frames\Login.xaml;Frames\ManagerDashboard.xaml;Frames\SetUp.xaml;Frames\WaiterDashboard.xaml;MainWindow.xaml;
+21779728066
+2162084401063
+Frames\AddItem.xaml;Frames\Components\NewMenuItem.xaml;Frames\Control\Block.xaml;Frames\Control\LoadingAnimation.xaml;Frames\Login.xaml;Frames\ManagerDashboard.xaml;Frames\SetUp.xaml;Frames\WaiterDashboard.xaml;MainWindow.xaml;
 
 True
 
