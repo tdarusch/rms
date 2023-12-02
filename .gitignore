@@ -1,12 +1,1 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/.vs/RMS/FileContentIndex/01d4837f-87e4-4915-91c6-84666127ec7b.vsidx
-/.vs/RMS/FileContentIndex/22a27594-c797-4e3a-9d64-f8928fe4a6bc.vsidx
-/.vs/RMS/FileContentIndex/47d4e11d-eeac-4061-ae53-5e7a5b6286b5.vsidx
-/.vs/RMS/FileContentIndex/a600b205-eddf-40c6-acde-456105c530d1.vsidx
-/.vs/RMS/FileContentIndex/d3f95993-3bcc-4a7c-a870-9cc5a15ec26e.vsidx
-/.vs/RMS/FileContentIndex/3a2cb706-f4f4-4d46-aee0-777f28bca141.vsidx
-/.vs/RMS/FileContentIndex/686b54c0-f400-4d42-932a-42c3c07ad9fc.vsidx
-/.vs/RMS/FileContentIndex
+﻿/.vs/RMS/FileContentIndex
