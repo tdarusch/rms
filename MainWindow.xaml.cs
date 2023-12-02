@@ -48,9 +48,5 @@ namespace RMS
             ((MainWindow)Application.Current.MainWindow).Main.Content = new WaiterDashboard();
         }
 
-        public static void displayFadingLoader()
-        {
-            ((MainWindow)Application.Current.MainWindow).Main.Content = new SetUp(true);
-        }
     }
 }

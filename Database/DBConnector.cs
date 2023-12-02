@@ -21,16 +21,10 @@ namespace RMS.Controllers
 
         public static async void InitializeDB() {
 
-            DatabaseFacade facade = null;
-            await Task.Run(() => { 
-                facade = new DatabaseFacade(new DataContext()); // creates schemas based on DataContext & schemas
-            });
-            if(facade != null) {
-                await Task.Run(() => {
-                    facade.EnsureCreated(); // ensures database was properly initialized
-                }); 
-            }
-            SetUp.IsComplete();
+            DatabaseFacade facade = new DatabaseFacade(new DataContext()); // creates schemas based on DataContext & schemas
+            facade.EnsureCreated();
+            await Task.Delay(2000);
+            MainWindow.displayLogin();
 
         }
 

@@ -20,24 +20,10 @@ namespace RMS.Frames
     /// </summary>
     public partial class SetUp : Page
     {
-        public SetUp(bool fadeOut=false)
+        public SetUp()
         {
             InitializeComponent();
-            if(fadeOut) {
-                FadeOut();
-            }
         }
 
-        private async void FadeOut() {
-            LoadingAnimation.Opacity = 1;
-            while(LoadingAnimation.Opacity >= 0) {
-                LoadingAnimation.Opacity -= 0.1;
-                await Task.Delay(500);
-            }
-        }
-
-        public static void IsComplete() {
-            MainWindow.displayFadingLoader();
-        }
     }
 }

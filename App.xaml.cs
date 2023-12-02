@@ -17,7 +17,7 @@ namespace RMS
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            /*DBConnector.InitializeDB();*/
+            DBConnector.InitializeDB();
         }
     }
 }
