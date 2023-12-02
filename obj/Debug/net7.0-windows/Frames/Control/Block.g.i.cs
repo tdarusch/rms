@@ -60,7 +60,7 @@ namespace LoadingControl.Control {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/RMS;component/frames/control/block.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/RMS;V1.0.0.0;component/frames/control/block.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Frames\Control\Block.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

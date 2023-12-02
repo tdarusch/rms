@@ -77,7 +77,7 @@ namespace RMS.Frames.Components {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/RMS;component/frames/components/newmenuitem.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/RMS;V1.0.0.0;component/frames/components/newmenuitem.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Frames\Components\NewMenuItem.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

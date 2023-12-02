@@ -77,7 +77,7 @@ namespace RMS.Frames {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/RMS;component/frames/login.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/RMS;V1.0.0.0;component/frames/login.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Frames\Login.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
