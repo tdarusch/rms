@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RMS.EntityObjects;
+using RMS.EntityObjects; 
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using RMS.Database;
 using RMS.Frames;
@@ -24,7 +24,7 @@ namespace RMS.Database
 
             DatabaseFacade facade = new DatabaseFacade(new DataContext()); // creates schemas based on DataContext & schemas
             facade.EnsureCreated();
-            await Task.Delay(2000);
+            await Task.Delay(4000);
             MainWindow.displayLogin();
 
         }
@@ -45,24 +45,13 @@ namespace RMS.Database
         public static void SaveItem(Item item) {
             using (DataContext context = new DataContext()) {
                 context.Items.Add(item);
-            }
-        }
-
-        public static void SaveOrder(Order order) {
-            using (DataContext context = new DataContext()) {
-                context.Orders.Add(order);
-            }
-        }
-
-        public static List<Item> GetItemsByOrderId(int orderId) {
-            using (DataContext context = new DataContext()) {
-                return context.Orders.Find(orderId).Items;
+                context.SaveChanges();
             }
         }
 
         public static List<Item> GetAllItems() {
             using (DataContext context = new DataContext()) {
-                return context.Items.Where(item => DBNull.Value.Equals(item.OrderId)).ToList();
+                return context.Items.ToList();
             }
         }
 

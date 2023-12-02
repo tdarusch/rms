@@ -26,8 +26,6 @@ namespace RMS.EntityObjects
         }
         public string Name { get; set; }
         public string Description { get; set; }
-        [ForeignKey("Account")]
-        public int OrderId { get; set; }
 
     }
 }
