@@ -34,14 +34,34 @@ namespace RMS.Frames
 
         public void Submit(object sender, RoutedEventArgs e)
         {
+
+            bool validItem = true;
+            
             string name = ItemName.Text;
+            foreach (char c in name) {
+                if (!Char.IsLetter(c)) {
+                    setError("Item name cannot contain numbers/special characters");
+                    ItemName.Text = "";
+                    validItem = false;
+                    break;
+                }
+            }
+
             string description = ItemDescription.Text;
+            if (description.Length > 400) {
+                setError("Item description cannot exceed 400 characters");
+                ItemDescription.Text = "";
+                validItem = false;
+            }
+
             double price;
             bool isValidPrice = Double.TryParse(ItemPrice.Text, out price);
             if(!isValidPrice) {
                 setError("Price must be a valid integer");
                 ItemPrice.Text = "";
-            } else {
+                validItem = false;
+            }
+            if(validItem) {
                 Item newItem = new Item();
                 newItem.Name = name;
                 newItem.Description = description;
@@ -55,6 +75,14 @@ namespace RMS.Frames
         {
             HelperText.Foreground = Brushes.Maroon;
             HelperText.Text = $"Invalid Input: {error}";
+            resetHelperText();
+        }
+
+        private async void resetHelperText()
+        {
+            await Task.Delay(3500);
+            HelperText.Foreground = Brushes.DarkGray;
+            HelperText.Text = "";
         }
 
     }

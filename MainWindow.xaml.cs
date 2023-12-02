@@ -24,17 +24,21 @@ namespace RMS
             Main.Content = new SetUp();
         }
 
-        public static void displayLogin() {
+        public static async void displayLogin() {
             ((MainWindow)Application.Current.MainWindow).Main.Content = new Login();
         }
 
-        public static void displayLogout()
+        public static async void displayLogout()
         {
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new SetUp();
+            await Task.Delay(1500);
             ((MainWindow)Application.Current.MainWindow).Main.Content = new Login("You have logged out successfully");
         }
 
-        public static void displayManagerPortal()
+        public static async void displayManagerPortal()
         {
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new SetUp();
+            await Task.Delay(1500);
             ((MainWindow)Application.Current.MainWindow).Main.Content = new ManagerDashboard();
         }
 
@@ -43,8 +47,10 @@ namespace RMS
             ((MainWindow)Application.Current.MainWindow).Main.Content = new AddItem();
         }
 
-        public static void displayWaiterPortal()
+        public static async void displayWaiterPortal()
         {
+            ((MainWindow)Application.Current.MainWindow).Main.Content = new SetUp();
+            await Task.Delay(2500);
             ((MainWindow)Application.Current.MainWindow).Main.Content = new WaiterDashboard();
         }
 

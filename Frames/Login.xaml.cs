@@ -56,7 +56,7 @@ namespace RMS.Frames
         }
 
         private async void resetHelperText() {
-            await Task.Delay(5000);
+            await Task.Delay(3500);
             HelperText.Foreground = Brushes.DarkGray;
             HelperText.Text = "";
         }

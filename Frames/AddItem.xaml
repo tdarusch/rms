@@ -29,7 +29,7 @@
         />
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="10px">
             <TextBlock Text="Item Name" Margin="10px 10px 10px 5px" FontWeight="Medium" FontSize="15"/>
-            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 10px" x:Name="ItemName">
+            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 10px" x:Name="ItemName" FontSize="15">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -37,7 +37,7 @@
                 </TextBox.Resources>
             </TextBox>
             <TextBlock Text="Description" Margin="10px 10px 10px 5px" FontWeight="Medium" FontSize="15"/>
-            <TextBox Background="Snow" BorderThickness="1" Height="100px" Margin="10px 0px 10px 10px" x:Name="ItemDescription">
+            <TextBox Background="Snow" BorderThickness="1" Height="100px" Margin="10px 0px 10px 10px" x:Name="ItemDescription" TextWrapping="Wrap" FontSize="15">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -45,7 +45,7 @@
                 </TextBox.Resources>
             </TextBox>
             <TextBlock Text="Price" Margin="10px 10px 10px 5px" FontWeight="Medium" FontSize="15"/>
-            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 10px" Width="150px" HorizontalAlignment="Left" x:Name="ItemPrice">
+            <TextBox Background="Snow" BorderThickness="1" Height="30px" Margin="10px 0px 10px 10px" Width="150px" HorizontalAlignment="Left" x:Name="ItemPrice" FontSize="15">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
