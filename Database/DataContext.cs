@@ -12,9 +12,11 @@ namespace RMS.Database
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source = InitialDataFile.db");
+            optionsBuilder.UseSqlite("Data Source = DataSchema.db");
         }
 
         public DbSet<Account> Accounts { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Item> Items { get; set; }
     }
 }

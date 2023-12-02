@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using RMS.Controllers;
 using RMS.EntityObjects;
 using RMS.Frames;
+using RMS.Database;
 
 namespace RMS.Controllers
 {

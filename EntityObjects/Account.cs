@@ -4,37 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using RMS.Database;
+using RMS.Controllers;
 
 namespace RMS.EntityObjects
 {
     public class Account
     {
         [Key]
-        private int id;
-        public int Id
-        {
-            get { return id; }
-            set
-            {
-                id = value.GetHashCode();
-            }
-        }
-        private string username;
-        public string Username
-        {
-            get { return username; }
-            set
-            {
-                username = value.GetHashCode().ToString();
-            }
-        }
+        public int Id { get; set; }
+        public string Username { get; set; }
         private string password;
         public string Password
         {
             get { return password; }
             set
             {
-                password = value.GetHashCode().ToString();
+                string hash = DBConnector.Hash(value);
+                password = hash;
             }
         }
         private string type;

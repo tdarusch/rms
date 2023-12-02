@@ -13,7 +13,6 @@ C:\Users\Tom\source\repos\RMS\bin\Debug\net5.0-windows\RMS.deps.json
 C:\Users\Tom\source\repos\RMS\bin\Debug\net5.0-windows\RMS.runtimeconfig.json
 C:\Users\Tom\source\repos\RMS\bin\Debug\net5.0-windows\RMS.runtimeconfig.dev.json
 C:\Users\Tom\source\repos\RMS\bin\Debug\net5.0-windows\RMS.dll
-C:\Users\Tom\source\repos\RMS\bin\Debug\net5.0-windows\ref\RMS.dll
 C:\Users\Tom\source\repos\RMS\bin\Debug\net5.0-windows\RMS.pdb
 C:\Users\Tom\source\repos\RMS\obj\Debug\net5.0-windows\Frames\AddItem.baml
 C:\Users\Tom\source\repos\RMS\obj\Debug\net5.0-windows\Frames\Login.baml
@@ -70,3 +69,5 @@ C:\Users\Tom\source\repos\RMS\obj\Debug\net5.0-windows\Frames\Control\Block.baml
 C:\Users\Tom\source\repos\RMS\obj\Debug\net5.0-windows\Frames\Control\Block.g.cs
 C:\Users\Tom\source\repos\RMS\obj\Debug\net5.0-windows\Frames\Control\LoadingAnimation.g.cs
 C:\Users\Tom\source\repos\RMS\obj\Debug\net5.0-windows\Frames\Control\LoadingAnimation.baml
+C:\Users\Tom\source\repos\RMS\obj\Debug\net5.0-windows\RMS.sourcelink.json
+C:\Users\Tom\source\repos\RMS\obj\Debug\net5.0-windows\refint\RMS.dll

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="RMS.Frames.Components.NewMenuItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RMS.Frames.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ListBoxItem Height="100px" Width="615px" Margin="5px" Background="#FFEEEEEE" BorderBrush="LightGray">
+        <ListBoxItem.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="5"/>
+            </Style>
+        </ListBoxItem.Resources>
+        <StackPanel Height="75px" Width="605px" Margin="0 5">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="" x:Name="Name" FontSize="15" FontWeight="SemiBold" VerticalAlignment="Top" Margin="5 0 5 0" />
+                <TextBlock Text="" x:Name="Price" FontSize="15" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
+            </StackPanel>
+            <Separator />
+            <TextBlock 
+                    Text=""
+                    Height="50"
+                    TextWrapping="WrapWithOverflow"
+                    FontStyle="Italic"
+                    Margin="5 0 5 0"
+                    x:Name="Description"
+                />
+        </StackPanel>
+    </ListBoxItem>
+</UserControl>

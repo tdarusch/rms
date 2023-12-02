@@ -57,13 +57,14 @@
                 Background="Snow"
                 HorizontalAlignment="Center"
                 Height="300" VerticalAlignment="Top" Width="650"
+                x:Name="MenuItemsBox"
             >
                 <ListBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </ListBox.Resources>
-                <ListBoxItem Height="100px" Margin="5px" Background="#FFEEEEEE" BorderBrush="LightGray">
+                <ListBoxItem Width="615px" Height="100px" Margin="5px" Background="#FFEEEEEE" BorderBrush="LightGray">
                     <ListBoxItem.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -84,7 +85,7 @@
                         />
                     </StackPanel>
                 </ListBoxItem>
-                <ListBoxItem Height="100px" Margin="5px" Background="#FFEEEEEE" BorderBrush="LightGray">
+                <ListBoxItem Height="100px" Width="615px" Margin="5px" Background="#FFEEEEEE" BorderBrush="LightGray">
                     <ListBoxItem.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -105,7 +106,7 @@
                         />
                     </StackPanel>
                 </ListBoxItem>
-                <ListBoxItem Height="100px" Margin="5px" Background="#FFEEEEEE" BorderBrush="LightGray">
+                <ListBoxItem Height="100px" Width="615px" Margin="5px" Background="#FFEEEEEE" BorderBrush="LightGray">
                     <ListBoxItem.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>

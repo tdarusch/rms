@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using RMS.Controllers;
+using RMS.Database;
 using RMS.Frames;
 
 namespace RMS
