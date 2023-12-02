@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Repos\rms\obj\Debug\net5.0-windows\
+C:\Repos\rms\obj\Debug\net7.0-windows\
 RMS
 none
 false
-TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Repos\rms\App.xaml
 6884568551
 
-17105424639
-193-1192607083
+17712391608
+1981723223080
 Frames\AddItem.xaml;Frames\Login.xaml;Frames\ManagerDashboard.xaml;Frames\SetUp.xaml;Frames\WaiterDashboard.xaml;MainWindow.xaml;
 
-False
+True
 
