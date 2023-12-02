@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RMS.Controllers;
 using RMS.EntityObjects;
+using RMS.Frames;
 
 namespace RMS.Controllers
 {
@@ -41,14 +42,14 @@ namespace RMS.Controllers
         public static void Login(String username, String password) {
             Account user;
             try {
-                user = DBConnector.getUser(username);
+                user = DBConnector.GetUser(username, password);
             } catch (Exception e) {
                 throw new KeyNotFoundException(e.Message);
             }
-            if(user.getType().Equals("MANAGER")) {
-                MainWindow.displayManagerPortal();
-            } else if(user.getType().Equals("WAITER")) {
-                MainWindow.displayWaiterPortal();
+            if(user.Type.Equals("MANAGER")) {
+                ManagerDashboard.Display();
+            } else if(user.Type.Equals("WAITER")) {
+                WaiterDashboard.Display();
             } else {
                 throw new Exception("Invalid account type found.");
             }

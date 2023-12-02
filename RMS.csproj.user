@@ -24,6 +24,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Frames\Control\Block.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\Control\LoadingAnimation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Frames\AddItem.xaml">
       <SubType>Designer</SubType>
     </Page>

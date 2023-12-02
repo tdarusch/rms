@@ -35,5 +35,10 @@ namespace RMS.Frames
         {
             AddItemController.Display();
         }
+
+        public static void Display()
+        {
+            MainWindow.displayManagerPortal();
+        }
     }
 }

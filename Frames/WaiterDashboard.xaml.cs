@@ -30,5 +30,10 @@ namespace RMS.Frames
         {
             LogoutController.Logout();
         }
+
+        public static void Display()
+        {
+            MainWindow.displayWaiterPortal();
+        }
     }
 }

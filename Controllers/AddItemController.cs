@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RMS.Frames;
 
 namespace RMS.Controllers
 {
     class AddItemController
     {
         public static void Display() {
-            MainWindow.displayAddItem();
+            AddItem.Display();
         }
     }
 }

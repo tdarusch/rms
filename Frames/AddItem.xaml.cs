@@ -24,5 +24,10 @@ namespace RMS.Frames
         {
             InitializeComponent();
         }
+
+        public static void Display()
+        {
+            MainWindow.displayAddItem();
+        }
     }
 }
