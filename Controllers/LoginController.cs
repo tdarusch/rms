@@ -48,7 +48,7 @@ namespace RMS.Controllers
                 throw new KeyNotFoundException(e.Message);
             }
             if(user.Type.Equals("MANAGER")) {
-                ManagerDashboard.Display();
+                ManagerDashboard.DisplayLoader();
             } else if(user.Type.Equals("WAITER")) {
                 WaiterDashboard.Display();
             } else {

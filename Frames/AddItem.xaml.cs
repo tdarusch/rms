@@ -39,7 +39,7 @@ namespace RMS.Frames
             
             string name = ItemName.Text;
             foreach (char c in name) {
-                if (!Char.IsLetter(c)) {
+                if (!Char.IsLetter(c) && !Char.IsWhiteSpace(c)) {
                     setError("Item name cannot contain numbers/special characters");
                     ItemName.Text = "";
                     validItem = false;

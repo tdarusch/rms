@@ -49,5 +49,10 @@ namespace RMS.Frames
         {
             MainWindow.displayManagerPortal();
         }
+
+        public static void DisplayLoader()
+        {
+            MainWindow.displayManagerPortal(true);
+        }
     }
 }
