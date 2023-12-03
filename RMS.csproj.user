@@ -7,48 +7,48 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Frames\AddItem.xaml.cs">
+    <Compile Update="BoundaryObjects\AddItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Frames\Components\NewMenuItem.xaml.cs">
+    <Compile Update="BoundaryObjects\Components\NewMenuItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Frames\Login.xaml.cs">
+    <Compile Update="BoundaryObjects\Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Frames\ManagerDashboard.xaml.cs">
+    <Compile Update="BoundaryObjects\ManagerDashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Frames\SetUp.xaml.cs">
+    <Compile Update="BoundaryObjects\SetUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Frames\WaiterDashboard.xaml.cs">
+    <Compile Update="BoundaryObjects\WaiterDashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Frames\Components\NewMenuItem.xaml">
+    <Page Update="BoundaryObjects\Components\NewMenuItem.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Frames\Control\Block.xaml">
+    <Page Update="BoundaryObjects\Control\Block.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Frames\Control\LoadingAnimation.xaml">
+    <Page Update="BoundaryObjects\Control\LoadingAnimation.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Frames\AddItem.xaml">
+    <Page Update="BoundaryObjects\AddItem.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Frames\Login.xaml">
+    <Page Update="BoundaryObjects\Login.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Frames\ManagerDashboard.xaml">
+    <Page Update="BoundaryObjects\ManagerDashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Frames\SetUp.xaml">
+    <Page Update="BoundaryObjects\SetUp.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Frames\WaiterDashboard.xaml">
+    <Page Update="BoundaryObjects\WaiterDashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

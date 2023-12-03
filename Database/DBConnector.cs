@@ -13,6 +13,7 @@ namespace RMS.Database
 {
     class DBConnector
     {
+        public Account LinkedAccount { get; set; }
 
         public static bool validateAccount(String username, String password) {
             using (DataContext context = new DataContext()){
@@ -69,6 +70,41 @@ namespace RMS.Database
                 }
                 return hex;
             }
+        }
+
+        public static void SaveLogin(Account account) 
+        {
+            Log log = new Log();
+            log.Time = getTime(DateTime.Now);
+            log.Date = getDate(DateTime.Now);
+            log.LogEvent = "LOGIN";
+            log.AccountId = account.Id;
+            using (DataContext context = new DataContext()) {
+                context.Logs.Add(log);
+                context.SaveChanges();
+            }
+        }
+
+        public static void SaveLogout(Account account)
+        {
+            Log log = new Log();
+            log.Time = getTime(DateTime.Now);
+            log.Date = getDate(DateTime.Now);
+            log.LogEvent = "LOGOUT";
+            log.AccountId = account.Id;
+            using (DataContext context = new DataContext())
+            {
+                context.Logs.Add(log);
+                context.SaveChanges();
+            }
+        }
+
+        private static string getTime(DateTime dateTime) {
+            return dateTime.ToString("h:mm tt");
+        }
+
+        private static string getDate(DateTime dateTime) {
+            return dateTime.Date.ToShortDateString();
         }
     }
 }

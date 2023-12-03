@@ -7,6 +7,8 @@ using RMS.Controllers;
 using RMS.EntityObjects;
 using RMS.Frames;
 using RMS.Database;
+using RMS;
+using System.Windows;
 
 namespace RMS.Controllers
 {
@@ -44,6 +46,8 @@ namespace RMS.Controllers
             Account user;
             try {
                 user = DBConnector.GetUser(username, password);
+                DBConnector.SaveLogin(user);
+                Application.Current.Properties["currentUser"] = user;
             } catch (Exception e) {
                 throw new KeyNotFoundException(e.Message);
             }

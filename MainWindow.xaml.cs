@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RMS.EntityObjects;
 using RMS.Frames;
 
 namespace RMS
@@ -22,6 +23,7 @@ namespace RMS
         {
             InitializeComponent();
             Main.Content = new SetUp();
+            Application.Current.Properties.Add("currentUser", null);
         }
 
         public static void displayLogin() {
