@@ -17,7 +17,7 @@ namespace RMS.Database
 
         public static bool validateAccount(String username, String password) {
             using (DataContext context = new DataContext()){
-                return context.Accounts.Any(account => account.Username.Equals(username) && account.Password.Equals(Hash(password)) );
+                return context.Accounts.Any(account => account.Username.Equals(Hash(username)) && account.Password.Equals(Hash(password)) );
             }
         }
 
@@ -33,9 +33,9 @@ namespace RMS.Database
         public static Account GetUser(string username, string password) {
             Account account;
             using (DataContext context = new DataContext()) {
-                bool userExists = context.Accounts.Any(account => account.Username.Equals(username));
+                bool userExists = context.Accounts.Any(account => account.Username.Equals(Hash(username)));
                 if(userExists) {
-                    account = context.Accounts.First(account => account.Username.Equals(username) && account.Password.Equals(Hash(password).ToString()));
+                    account = context.Accounts.First(account => account.Username.Equals(Hash(username)) && account.Password.Equals(Hash(password).ToString()));
                 } else {
                     throw new KeyNotFoundException($"Account with username: ${username} not found.");
                 }

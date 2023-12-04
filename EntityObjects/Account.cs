@@ -13,7 +13,15 @@ namespace RMS.EntityObjects
     {
         [Key]
         public int Id { get; set; }
-        public string Username { get; set; }
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set {
+                string hash = DBConnector.Hash(value);
+                username = hash;
+            }
+        }
         private string password;
         public string Password
         {
